@@ -7,15 +7,15 @@
     --azulClaro: #56B4E9;
     --laranja: #D55E00;
     --laranjaClaro: #E69F00;
-    --amarelo: #F0E442;
     --verde: #009E73;
+    --amarelo: #F0E442;
     --rosa: #CC79A7;
 }
 
 *{
     font-family: "Caacupe One";
     box-sizing: border-box;
-    background-color: var(--azul);
+    background-color: var(--verde);
 }
 
 .TituloQuiz{
@@ -69,7 +69,7 @@ div a{
 
 .IniciarQuiz a:hover{
     color: var(--preto);
-    background-color: var(--verde);
+    background-color: var(--azulClaro);
 }
 
 
@@ -93,7 +93,7 @@ div a{
        1px -1px     0 var(--preto),
       -1px  1px     0 var(--preto),
        1px  1px     0 var(--preto);
-    background-color: var(--azulClaro);
+    background-color: var(--laranjaClaro);
     padding: 15px;
     border-radius: 10px;
     transition: 0.5s;
@@ -132,18 +132,18 @@ button:active{
 }
 
 .Resposta1 button{
-    background: var(--laranjaClaro);
+    background: var(--azul);
 }
 
 .Resposta2 button{
-    background: var(--verde);
-}
-
-.Resposta3 button{
     background: var(--laranja);
 }
 
-.Resposta4 button{
+.Resposta3 button{
     background: var(--rosa);
+}
+
+.Resposta4 button{
+    background: var(--amarelo);
 }
 /* 0% IA */
