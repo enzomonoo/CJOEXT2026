@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+:root{
+    --preto: #000;
+    --branco: #FFFFFF;
+    --azul: #0072B2;
+    --azulClaro: #56B4E9;
+    --laranja: #D55E00;
+    --laranjaClaro: #E69F00;
+    --amarelo: #F0E442;
+    --verde: #009E73;
+    --rosa: #CC79A7;
+}
+
+*{
+    font-family: "Caacupe One";
+    background-color: var(--laranjaClaro);
+}
+
+.TituloLista{
+    color: var(--branco);
+    text-shadow:
+       3px  3px     0 var(--preto),
+      -1px -1px     0 var(--preto),  
+       1px -1px     0 var(--preto),
+      -1px  1px     0 var(--preto),
+       1px  1px     0 var(--preto);
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.75;
+    font-size: 21pt;
+    rotate: -5deg;
+}
+
+h1  .TextoTitulo{
+    padding: 2px;
+    width: 35%;
+}
+
+.IniciarLista{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22pt;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.BotaoIniciar{
+    background-color: var(--preto);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+div a{
+    padding: 10px;
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.5; /*Transição leve das cores do botão */
+}
+
+
+.IniciarLista a:hover{
+    color: var(--preto);
+    background-color: var(--laranja);
+}
+
+/*Texto das Partes */
+
+.TituloPartes{
+    color: var(--branco);
+    text-shadow:
+       3px  3px     0 var(--preto),
+      -1px -1px     0 var(--preto),  
+       1px -1px     0 var(--preto),
+      -1px  1px     0 var(--preto),
+       1px  1px     0 var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.75;
+    font-size: 18pt;
+    rotate: -5deg;
+    background-color: transparent;
+    margin-bottom: 0%;
+}
+
+.Pergunta{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22pt;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.Pergunta h2{
+    color: var(--branco);
+    -webkit-text-stroke: 1px var(--preto);
+    text-shadow:
+       3px  3px     0 var(--preto),
+      -1px -1px     0 var(--preto),  
+       1px -1px     0 var(--preto),
+      -1px  1px     0 var(--preto),
+       1px  1px     0 var(--preto);
+    background-color: var(--laranja);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/*Botão de Envio*/
+
+button{
+    padding: 1em;
+    font-weight: 900;
+    font-size: 20pt;
+    border: 3px solid var(--preto);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor:pointer;
+    line-height: 0.5;
+}
+
+button:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+button:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+.BotaoEnviar button{
+    background: var(--amarelo);
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    float:right;
+}
+
+/*Caixa de Texto*/
+
+.ContainerResposta {
+    position: relative;
+    width: 100%;
+}
+
+.RespostaInput {
+    width: 92%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--preto);
+    background-color: var(--branco);
+    border: 4px solid var(--preto);
+    position: relative;
+    overflow: auto;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 5px 5px 0 var(--preto), 10px 10px 0 var(--laranja);
+}
+
+
+@keyframes EfeitoPulse {
+  0%,
+  100%  {border-color: var(--preto);}
+  50%   {border-color: var(--laranja);}
+}
+
+@keyframes EfeitoGlitch {
+  0%    {transform: translate(0);}
+  20%   {transform: translate(-2px, 2px);}
+  40%   {transform: translate(-2px, -2px);}
+  60%   {transform: translate(2px, 2px);}
+  80%   {transform: translate(2px, -2px);}
+  100%  {transform: translate(0);}
+}
+
+.RespostaInput:focus {
+  animation: EfeitoPulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite,
+    EfeitoGlitch 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.RespostaInput:focus::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--branco);
+  z-index: -1;
+}
+
+@keyframes EfeitoCorte {
+  0%    {clip-path: inset(0 100% 0 0);}
+  10%   {clip-path: inset(0 5% 0 0);}
+  20%   {clip-path: inset(0 80% 0 0);}
+  30%   {clip-path: inset(0 10% 0 0);}
+  40%   {clip-path: inset(0 50% 0 0);}
+  50%   {clip-path: inset(0 30% 0 0);}
+  60%   {clip-path: inset(0 70% 0 0);}
+  70%   {clip-path: inset(0 15% 0 0);}
+  80%   {clip-path: inset(0 90% 0 0);}
+  90%   {clip-path: inset(0 5% 0 0);}
+  100%  {clip-path: inset(0 100% 0 0);}
+}
+
+.RespostaInput:focus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--preto);
+    z-index: -2;
+    clip-path: inset(0 100% 0 0);
+    animation: EfeitoCorte 4s steps(2, end) infinite;
+}
+
+.LabelResposta {
+    position: absolute;
+    left: -3px;
+    top: -35px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--branco);
+    background-color: var(--preto);
+    padding: 5px 10px;
+    transform: rotate(-1deg);
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.RespostaInput:focus + .LabelResposta {
+    transform: rotate(0deg) scale(1.05);
+    background-color: var(--laranja);
+}
+
+.EscritaLisa {
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes EfeitoGradiente {
+  0%    {background-position: 300px 0;}
+  100%  {background-position: 0 0;}
+}
+
+.EscritaLisa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: EfeitoGradiente(90deg, --branco 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.EscritaLisa:focus::before {
+  opacity: 1;
+  animation: EfeitoGradiente 2s linear infinite;
+}
+
+.RespostaInput::placeholder {
+  color: var(--laranja);
+  transition: color 0.3s ease;
+}
+
+.RespostaInput:focus::placeholder {
+  color: transparent;
+}
+
+.RespostaInput:focus {
+  animation: EfeitoPulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+/* 0% IA */
