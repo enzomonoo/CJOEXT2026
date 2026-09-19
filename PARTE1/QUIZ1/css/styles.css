@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+:root{
+    --preto: #000;
+    --branco: #FFFFFF;
+    --azul: #0072B2;
+    --azulClaro: #56B4E9;
+    --laranja: #D55E00;
+    --laranjaClaro: #E69F00;
+    --verde: #009E73;
+    --amarelo: #F0E442;
+    --rosa: #CC79A7;
+}
+
+*{
+    font-family: "Caacupe One";
+    box-sizing: border-box;
+    background-color: var(--azul);
+}
+
+.TituloQuiz{
+    color: var(--branco);
+    text-shadow:
+       3px  3px     0 var(--preto),
+      -1px -1px     0 var(--preto),  
+       1px -1px     0 var(--preto),
+      -1px  1px     0 var(--preto),
+       1px  1px     0 var(--preto);
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.75;
+    font-size: 21pt;
+    rotate: -5deg;
+}
+
+h1  .TextoTitulo{
+    padding: 2px;
+    width: 35%;
+}
+
+.IniciarQuiz{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22pt;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.BotaoIniciar{
+    background-color: var(--preto);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+div a{
+    padding: 10px;
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.5; /*Transição leve das cores do botão */
+}
+
+
+.IniciarQuiz a:hover{
+    color: var(--preto);
+    background-color: var(--azulClaro);
+}
+
+
+.Pergunta{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22pt;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.Pergunta h2{
+    color: var(--branco);
+    -webkit-text-stroke: 1px var(--preto);
+    text-shadow:
+       3px  3px     0 var(--preto),
+      -1px -1px     0 var(--preto),  
+       1px -1px     0 var(--preto),
+      -1px  1px     0 var(--preto),
+       1px  1px     0 var(--preto);
+    background-color: var(--azulClaro);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Botões de Resposta*/
+
+.RespostasTopo, .RespostasAbaixo{
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 0.75;
+    justify-content: center;
+}
+
+button{
+    padding: 2em;
+    font-weight: 900;
+    font-size: 18pt;
+    border: 3px solid var(--preto);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor:pointer;
+    line-height: 1;
+}
+
+button:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+button:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+.Resposta1 button{
+    background: var(--laranjaClaro);
+}
+
+.Resposta2 button{
+    background: var(--verde);
+}
+
+.Resposta3 button{
+    background: var(--laranja);
+}
+
+.Resposta4 button{
+    background: var(--rosa);
+}
+/* 0% IA */
