@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de Acessibilidade Digital — conheça, aprenda e pratique inclusão no mundo digital.">
+    <title>Acessibilidade Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="Cabecalho">
+        <div class="CabecalhoInterno">
+            <a class="Marca" href="index.html" aria-label="Acessibilidade Digital — Início">
+                <span class="MarcaTitulo">Acessibilidade Digital</span>
+                <span class="MarcaSubtitulo">CONHECER · APRENDER · INCLUIR</span>
+            </a>
+
+            <nav class="Navegacao" aria-label="Navegação principal">
+                <a class="LinkNav Ativo" href="index.html" aria-current="page">Início</a>
+                <a class="LinkNav" href="Apresentações/Apresentação1.html">Apresentações</a>
+                <a class="LinkNav" href="QUIZ1/index.html">Quiz 1</a>
+                <a class="LinkNav" href="QUIZ2/index.html">Quiz 2</a>
+                <a class="LinkNav" href="EXERCICIOS/index.html">Lista de Exercícios</a>
+            </nav>
+
+            <details class="ModoAcessivel">
+                <summary>
+                    <span class="IconePessoa" aria-hidden="true">★</span>
+                    <span>Modo acessível</span>
+                    <span class="Seta" aria-hidden="true">⌄</span>
+                </summary>
+                <div class="MenuAcessivel">
+                    <label>
+                        <input type="checkbox" id="alto-contraste">
+                        Alto contraste
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fonte-grande">
+                        Aumentar fonte
+                    </label>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="Hero" aria-labelledby="titulo-principal">
+            <div class="HeroConteudo">
+                <div class="HeroTexto">
+                    <h1 id="titulo-principal">Tecnologia<br>mais acessível<br>para todos.</h1>
+                    <p>Aprenda, pratique e contribua para um mundo digital mais inclusivo.</p>
+                    <a class="BotaoHero" href="Apresentações/Apresentação1.html">
+                        <span>Conhecimento que inclui<br>e transforma.</span>
+                        <span class="BotaoSeta" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+                <div class="HeroImagem">
+                    <img src="imagens/banner.png" alt="Ilustração de uma mulher utilizando um notebook, com a mensagem Mais inclusão. Mais pessoas. Mais possibilidades.">
+                </div>
+            </div>
+        </section>
+
+        <section class="Atalhos" id="apresentacoes" aria-labelledby="titulo-atalhos">
+            <h2 id="titulo-atalhos" class="VisuallyHidden">Conteúdos disponíveis</h2>
+
+            <a class="Card CardAmarelo" href="Apresentações/Apresentação1.html">
+                <span class="IconeCard" aria-hidden="true">▢</span>
+                <span class="CardTitulo">Apresentações</span>
+                <span class="CardTexto">Entenda o que é<br>Acessibilidade Digital.</span>
+                <span class="CardSeta" aria-hidden="true">→</span>
+            </a>
+
+            <a class="Card CardAzul" href="QUIZ1/index.html">
+                <span class="IconeCard" aria-hidden="true">?</span>
+                <span class="CardTitulo">Quiz 1</span>
+                <span class="CardTexto">Teste seus<br>conhecimentos.</span>
+                <span class="CardSeta" aria-hidden="true">→</span>
+            </a>
+
+            <a class="Card CardVerde" href="QUIZ2/index.html">
+                <span class="IconeCard" aria-hidden="true">?</span>
+                <span class="CardTitulo">Quiz 2</span>
+                <span class="CardTexto">Desafie-se com<br>novas perguntas.</span>
+                <span class="CardSeta" aria-hidden="true">→</span>
+            </a>
+
+            <a class="Card CardLaranja" href="EXERCICIOS/index.html">
+                <span class="IconeCard" aria-hidden="true">✓</span>
+                <span class="CardTitulo">Lista de Exercícios</span>
+                <span class="CardTexto">Pratique e fixe<br>o conteúdo.</span>
+                <span class="CardSeta" aria-hidden="true">→</span>
+            </a>
+        </section>
+
+        <section class="Frase" aria-label="Mensagem sobre acessibilidade">
+            <span></span>
+            <p>“Acessibilidade é o que torna o mundo digital um lugar de todos.”</p>
+            <span></span>
+        </section>
+    </main>
+
+    <footer class="Rodape">
+        <div class="RodapeInterno">
+            <div class="Instituto">
+                <div class="LogoIFSP" aria-hidden="true">
+                    <img src="./imagens/LogoIFSPCJO.png" alt="LogoIFSP" width="50">
+                </div>
+                <div>
+                    <strong>INSTITUTO FEDERAL</strong>
+                    <span>São Paulo</span>
+                    <span>Campus - Campos do Jordão</span>
+                </div>
+            </div>
+
+            <div class="RodapeCentro">Atividade de Extensão 1<br></div>
+
+            <div class="RodapeLinks">
+                <a href="Sobre/Sobre.html">Sobre</a>
+                <span>|</span>
+                <a href="Contato/Contato.html">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="sobre" class="VisuallyHidden">Projeto de extensão sobre Acessibilidade Digital.</div>
+    <div id="contato" class="VisuallyHidden">Área de contato do projeto.</div>
+</body>
+</html>

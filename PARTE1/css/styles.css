@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+:root{
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --azul: #0067B9;
+    --azulEscuro: #00549A;
+    --azulHero: #087CCB;
+    --azulClaro: #DDF1FF;
+    --fundo: #EFF9FF;
+    --amarelo: #FFD83D;
+    --verde: #45D29B;
+    --laranja: #FFA63D;
+    --rosa: #ED76AD;
+    --textoAzul: #072C67;
+    --sombra: rgba(0, 55, 110, 0.12);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Caacupe One", Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    color: var(--preto);
+    background-color: var(--fundo);
+}
+
+a{
+    color: inherit;
+}
+
+button,
+a,
+summary,
+input{
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.Cabecalho{
+    min-height: 100px;
+    background: linear-gradient(90deg, #07569F, #006FC1);
+    color: var(--branco);
+}
+
+.CabecalhoInterno{
+    width: min(1410px, 92%);
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Marca{
+    min-width: 385px;
+    color: var(--branco);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.MarcaTitulo{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.MarcaSubtitulo{
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+}
+
+.Navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.LinkNav{
+    padding: 16px 18px;
+    border-radius: 14px;
+    color: var(--branco);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 17px;
+    transition: 0.25s;
+}
+
+.LinkNav:hover,
+.LinkNav:focus-visible{
+    background: rgba(255,255,255,0.14);
+    outline: none;
+}
+
+.LinkNav.Ativo{
+    color: var(--textoAzul);
+    background: #D8EDFF;
+    font-weight: 900;
+}
+
+.ModoAcessivel{
+    position: relative;
+    min-width: 245px;
+}
+
+.ModoAcessivel summary{
+    list-style: none;
+    cursor: pointer;
+    min-height: 52px;
+    padding: 11px 15px;
+    border-radius: 14px;
+    background: #004D92;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.ModoAcessivel summary::-webkit-details-marker{
+    display: none;
+}
+
+.IconePessoa{
+    font-size: 22px;
+}
+
+.Seta{
+    margin-left: auto;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.MenuAcessivel{
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 245px;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--branco);
+    color: var(--textoAzul);
+    box-shadow: 0 12px 30px var(--sombra);
+}
+
+.MenuAcessivel label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 5px;
+    cursor: pointer;
+}
+
+.MenuAcessivel input{
+    width: 18px;
+    height: 18px;
+}
+
+.Hero{
+    background: linear-gradient(105deg, #0876C5 0%, #0B82D1 100%);
+    color: var(--branco);
+    overflow: hidden;
+}
+
+.HeroConteudo{
+    width: min(1410px, 92%);
+    min-height: 440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+}
+
+.HeroTexto{
+    position: relative;
+    z-index: 2;
+    padding: 30px 0 35px;
+}
+
+.HeroTexto h1{
+    margin: 0 0 18px;
+    font-size: clamp(48px, 5vw, 74px);
+    line-height: 0.92;
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+
+.HeroTexto p{
+    max-width: 530px;
+    margin: 0 0 24px;
+    font-size: clamp(21px, 2vw, 28px);
+    line-height: 1.12;
+}
+
+.BotaoHero{
+    width: min(455px, 100%);
+    min-height: 88px;
+    padding: 16px 20px 16px 30px;
+    border-radius: 18px;
+    background: #D8EDFF;
+    color: var(--textoAzul);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 1.05;
+    font-weight: 900;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.BotaoHero:hover,
+.BotaoHero:focus-visible{
+    transform: translateY(-3px);
+    background: var(--branco);
+    outline: 3px solid var(--branco);
+    outline-offset: 2px;
+}
+
+.BotaoSeta{
+    font-size: 43px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.HeroImagem{
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.HeroImagem img{
+    width: 100%;
+    max-width: 925px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.Atalhos{
+    width: min(1425px, 92%);
+    margin: 25px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.Card{
+    min-height: 255px;
+    position: relative;
+    padding: 20px 20px 18px;
+    border-radius: 18px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.Card:hover,
+.Card:focus-visible{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--sombra);
+    outline: 3px solid var(--textoAzul);
+    outline-offset: 3px;
+}
+
+.CardAmarelo{ background: var(--amarelo); }
+.CardVerde{ background: var(--verde); }
+.CardLaranja{ background: var(--laranja); }
+.CardAzul{ background: var(--azulHero); }
+
+.IconeCard{
+    width: 112px;
+    height: 112px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.68);
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.CardTitulo{
+    margin-top: 2px;
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.CardTexto{
+    margin-top: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.08;
+}
+
+.CardSeta{
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.Frase{
+    width: min(920px, 80%);
+    margin: 22px auto 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--textoAzul);
+}
+
+.Frase span{
+    height: 1px;
+    flex: 1;
+    background: #3983B9;
+}
+
+.Frase p{
+    margin: 0;
+    padding: 10px 28px;
+    border-radius: 18px;
+    background: #DDF1FF;
+    white-space: nowrap;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Rodape{
+    background: linear-gradient(90deg, #07579F, #00549A);
+    color: var(--branco);
+    min-height: 116px;
+}
+
+.RodapeInterno{
+    width: min(1360px, 90%);
+    min-height: 116px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.Instituto{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.LogoIFSP{
+    width: 45px;
+    height: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.LogoIFSP i{
+    display: block;
+    background: var(--branco);
+    border-radius: 2px;
+}
+
+.Instituto div:last-child{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.1;
+}
+
+.Instituto strong{
+    font-size: 17px;
+}
+
+.Instituto span{
+    font-size: 14px;
+}
+
+.RodapeCentro{
+    border-left: 1px solid rgba(255,255,255,0.8);
+    border-right: 1px solid rgba(255,255,255,0.8);
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.RodapeLinks{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.RodapeLinks a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.RodapeLinks a:hover,
+.RodapeLinks a:focus-visible{
+    text-decoration: underline;
+}
+
+.VisuallyHidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Modo acessível — feito apenas com HTML + CSS */
+body:has(#alto-contraste:checked){
+    --fundo: #FFFFFF;
+    --textoAzul: #000000;
+}
+
+body:has(#alto-contraste:checked) .Hero,
+body:has(#alto-contraste:checked) .Cabecalho,
+body:has(#alto-contraste:checked) .Rodape{
+    background: #000000;
+}
+
+body:has(#alto-contraste:checked) .BotaoHero,
+body:has(#alto-contraste:checked) .Frase p{
+    background: #FFFFFF;
+    color: #000000;
+}
+
+body:has(#fonte-grande:checked){
+    font-size: 115%;
+}
+
+@media (max-width: 1250px){
+    .CabecalhoInterno{
+        flex-wrap: wrap;
+        padding: 14px 0;
+    }
+
+    .Marca{
+        min-width: 0;
+        flex: 1;
+    }
+
+    .Navegacao{
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .ModoAcessivel{
+        min-width: 210px;
+    }
+
+    .HeroConteudo{
+        grid-template-columns: 45% 55%;
+    }
+
+    .HeroTexto h1{
+        font-size: 57px;
+    }
+
+    .CardTitulo{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 900px){
+    .CabecalhoInterno{
+        gap: 15px;
+    }
+
+    .MarcaTitulo{
+        font-size: 24px;
+    }
+
+    .MarcaSubtitulo{
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .ModoAcessivel{
+        min-width: 180px;
+    }
+
+    .HeroConteudo{
+        grid-template-columns: 1fr;
+    }
+
+    .HeroTexto{
+        padding-bottom: 10px;
+    }
+
+    .HeroImagem{
+        max-height: 390px;
+        justify-content: center;
+    }
+
+    .HeroImagem img{
+        max-height: 390px;
+        object-fit: contain;
+    }
+
+    .Atalhos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .RodapeInterno{
+        grid-template-columns: 1fr;
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    .Instituto,
+    .RodapeLinks{
+        justify-content: center;
+    }
+
+    .RodapeCentro{
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    .CabecalhoInterno{
+        align-items: stretch;
+    }
+
+    .Marca{
+        width: 100%;
+    }
+
+    .ModoAcessivel{
+        position: absolute;
+        top: 15px;
+        right: 4%;
+        min-width: 52px;
+        width: 52px;
+    }
+
+    .ModoAcessivel summary span:nth-child(2){
+        display: none;
+    }
+
+    .ModoAcessivel summary{
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .Navegacao{
+        padding-bottom: 4px;
+    }
+
+    .LinkNav{
+        padding: 11px 13px;
+        font-size: 14px;
+    }
+
+    .HeroTexto h1{
+        font-size: 46px;
+    }
+
+    .HeroTexto p{
+        font-size: 21px;
+    }
+
+    .BotaoHero{
+        font-size: 18px;
+    }
+
+    .Atalhos{
+        grid-template-columns: 1fr;
+    }
+
+    .Card{
+        min-height: 230px;
+    }
+
+    .Frase{
+        width: 92%;
+    }
+
+    .Frase span{
+        display: none;
+    }
+
+    .Frase p{
+        width: 100%;
+        white-space: normal;
+        font-size: 17px;
+    }
+}
+
+
