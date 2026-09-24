@@ -26,6 +26,7 @@
       -1px  1px     0 var(--preto),
        1px  1px     0 var(--preto);
     margin-top: 5%;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +34,6 @@
     line-height: 0.75;
     font-size: 21pt;
     rotate: -5deg;
-    background-color: transparent;
 }
 
 h1  .TextoTitulo{
